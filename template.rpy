@@ -7,4 +7,5 @@ define tw = FakePerson("Taiwan","cornelia")
 label scenario_test:
 
     show john a_0 at center
-    roc "lol"
+    roc "Hi, I'm China!"
+    tw "I'm Taiwan!"
