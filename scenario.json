@@ -1,0 +1,13 @@
+{
+    "description": "Description", 
+    "title": "Test", 
+    "tags": [
+        "tag1", 
+        "tag2", 
+        "tag3"
+    ], 
+    "label": "scenario_test", 
+    "prefix": "tst", 
+    "version": "0.0.1", 
+    "author": "Me"
+}
