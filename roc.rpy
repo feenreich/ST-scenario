@@ -50,10 +50,17 @@ label scenario_roc:
 
     show john a_7 at centerleft with easeinleft
     show jack a_9 at centerright with easeinright
-    roc "What did you just say?"
-    commie "You'll see."
+    roc "What did you just say? Uncle jack. I am a descent of some great magician and so does you?"
+    commie "Yes, but in general the spell requires you to chant the right incantation."
 
-    play sound sfx_device
+    show john a_0
+    roc "Hum...I still cannot believe this."
+
+    show jack a_3
+    commie "Well you don't need to."
+
+    play sound sfx_spell
+    commie "{spell}Relinquo Spiritus!!{/spell}"
 
     clone katrina john
     hide john
@@ -77,18 +84,38 @@ label scenario_roc:
     think "Wait ... is he ... in my body ?!"
 
     show john a_7
-    roc "Get out from my body!"
+    roc "Get out from my body! Why are you doing this?"
 
     show jack a_13 at center
     commie "How about {i}YOU{/i} get out!"
+
+    play sound sfx_spell
+    commie "{spell}Relinquo vestra Spiritus!!{/spell}"
 
     exspirit john a_15
 
     show johnGhost a_4 at centerleft with ease
     roc "Oh NO!!!"
 
-    show jack a_1 at center
+    show jack a_0 at center
+    commie "Wow I feel so young and energetic!"
+
+    show jack a_1
     commie "HAHAHAHAHAHAHAHAHA"
+
+    show johnGhost at faceleft with dissolve
+    show johnGhost at faceright with ease:
+        xalign 0.45
+        yalign 0
+    show johnGhost at centerleft, faceright with ease
+
+    show jack a_10
+    commie "You have no idea how I suffered from those pesky Witch-Hunters these years. {w=1.0}And how I felt about your mom, whose betrayal lead to my miserable life!"
+
+    roc "What are you talking about!?"
+
+    show jack a_3
+    commie "Looks like {b}this body{/b} has even greater potential than my origin one!"
 
     show johnGhost at faceleft with dissolve
     show johnGhost at faceright with ease:
@@ -97,10 +124,21 @@ label scenario_roc:
     show johnGhost at centerleft, faceright with ease
     roc "Why can't I get back?!"
 
+    show jack a_2
+    commie "Stop trying! By the way, you'd better find some body to reside before sun set."
+
+    show jack a_1
+    commie "{i}They{/i} are not friendly against wandering ghosts."
+
+    show jack a_3
+    commie "But even if you vanish somewhere, I couldn't care less anyway now, haha!"
+
+    show johnGhost at faceleft
+    roc "Oh no ... this is {b}bad{/b}!"
 
     scene black with dissolve
     stop music fadeout 1.5
-    roc "I have to find some body soon, or I will die!"
+    roc "I have to find someone -{i}anyone{/i} soon, or I will die!"
 
     scene bg school entrance day
     play music bgm_blown_away
@@ -121,7 +159,7 @@ label scenario_roc:
     hide john
 
     show cornelia a_6 at centerleft
-    tw "What.. is happening"
+    tw "What...is happening"
 
     show cornelia a_8 at center with ease
     roc_c "Thank God..."
@@ -130,17 +168,87 @@ label scenario_roc:
     tw "Why my mouth is moving!?"
 
     show cornelia a_3
-    roc_c "SHUT UP AND SLEEP!"
+    play sound sfx_spell
+    roc_c "{spell}SHUT UP AND SLEEP!{/spell}"
 
     show cornelia a_6
     tw "Zzz......"
 
     show cornelia a_7
-    roc_c "That actually worked?"
+    think "That ... actually worked?"
 
     show cornelia a_5
-    roc_c "Whatever. It's not time for this."
-    roc_c "I need to find {i}HIM{/i}!"
+    think "Whatever. It's not time for this. I need to find {i}HIM{/i}!"
+
+#    show cornelia a_5 at centerleft, faceleft with move
+#    play sound sfx_fall
+    show cornelia b_3:
+        rotate_pad False
+        block:
+            parallel:
+                linear 0.05 yanchor 0.4
+            parallel:
+                linear 0.05 ypos 0.53
+        block:
+            parallel:
+                linear 0.3 rotate 60
+            parallel:
+                linear 0.3 xpos 0.54
+            parallel:
+                linear 0.3 ypos 0.87
+    with vpunch
+    play sound sfx_whack
+#    show cornelia a_3:
+#        parallel:
+#            linear 4.5 xpos 0.1
+#        parallel:
+#            linear 4.5 ypos 1.0
+    roc_c "Aweee!"
+    "Right after making my first step, I fell down in a way that I've never experienced.{w=0.5} The balance of this body is totally different from my own."
+
+    show cornelia a_3:
+        pause 2.2
+        rotate_pad False
+        block:
+            parallel:
+                linear 0.3 rotate 0
+            parallel:
+                linear 0.3 xpos 0.55
+            parallel:
+                linear 0.3 ypos 0.6
+    with MoveTransition(1.5)
+#    show cornelia a_5 at centerleft with MoveTransition(1.5)
+    "I bearly get up from my tiny arms."
+
+    show cornelia a_0
+    roc_c "Wow these hands are ... {i}small{/i}."
+
+    show cornelia a_5
+    "A high-pitched feminine voice run through my scalp in a weird but rather familiar way. Is someone talking?"
+
+    show cornelia a_1
+    roc_c "And the school gate looks {i}huge{/i}!"
+
+    show cornelia a_5 at faceright with ease
+    "Here she is again."
+
+    show cornelia a_1 at faceleft with ease
+    show cornelia a_1 at faceright with ease
+    show cornelia a_0 at faceleft with ease
+    show cornelia a_3
+
+    think ".{w=0.5}.{w=0.5}.{w=0.5}.{w=0.5}.{w=0.5}.{w=0.5}"
+    roc_c "Is that ... {b}me{/b}?"
+    "It is not until this second that I suddenly notice the wind climbing through my half-naked thighs. As I glanced down"
+
+    show cornelia a_7
+    think "Am I wearing a skirt? I actually picked a girl's body?{w=0.5} Are these boobs for real?!"
+    "I feel a bit thrilled. But then suddenly trembled with fright, as an unpleasant thought comes up."
+    think "{size=-5}Will I be stuck like this?{/size}"
+
+    show cornelia b_5 faceleft
+    think "NO WAY I'm staying like this, I gotta find {i}HIM{/i} as soon as possible!"
+    "I started running, barely maintaining the balance. I wonder if this really counts as a run since each step of mine was so small and I can't really accelerate."
 
     scene black with dissolve
     stop music fadeout 1.5
@@ -149,16 +257,16 @@ label scenario_roc:
     play music bgm_mirage
 
     show jack a_0 at center
-    commie "So this is {i}my{/i} house?"
+    commie "So this is {i}my{/i} house now."
 
-    show jack a_1
-    commie "Finally, I got a GREAT body, haha!"
+    show jack a_3
+    commie "I'm a rich, young boy {i}again{/i}, haha! Let me examine the crucial memories first..."
 
     show cornelia b_3 at centerright, faceleft with easeinright
-    roc_c "WAIT"
+    roc_c "WAIT!!!!!!!"
 
-    show jack a_2
-    prc "What's up?"
+    show jack a_0
+    prc "What's up, Taiwan?"
 
 #    show cornelia b_3 at centerleft
 #    show john a_3 at centerright, faceleft
