@@ -1,5 +1,5 @@
-#init python hide:
-#    config.developer = True
+init python hide:
+    config.developer = True
 
 define commie = FakePerson("???", "jack")
 define prc = FakePerson("China", "jack")
@@ -16,7 +16,7 @@ label scenario_roc:
     roc "I'm China. This is a story between me and my lovely wife Taiwan."
 
     hide john
-    show cornelia a_0
+    show cornelia a_0 at center
     tw "Hi, my name is Taiwan, this is a story between me and ...{q}China{/q}."
 
     show cornelia a_5
@@ -259,14 +259,178 @@ label scenario_roc:
     show jack a_0 at center
     commie "So this is {i}my{/i} house now."
 
-    show jack a_3
-    commie "I'm a rich, young boy {i}again{/i}, haha! Let me examine the crucial memories first..."
+    show jack a_1
+    commie "I'm a rich, young boy {i}again{/i}, haha! Let me examine some crucial memories first..."
 
     show cornelia b_3 at centerright, faceleft with easeinright
     roc_c "WAIT!!!!!!!"
 
     show jack a_0
-    prc "What's up, Taiwan?"
+    commie "What's up, Taiwan?"
+
+    show cornelia a_7
+    roc_c "Give my body back you jerk!"
+
+    show jack a_0
+    commie "I have no idea what you're talking about, Taiwan?"
+
+    show cornelia a_3
+    roc_c "Don't call me {i}that{/i}! I'm {b}China{/b}!"
+
+    show jack a_3
+    commie "Oh, if you are China, then who am {b}I{/b}, then?"
+
+    show cornelia a_5
+    roc_c "Stop impersonating me Jack you stupid fucker. I don't know how you did that but if you don't switch me back {b}now{/b}, I will definitely tell everyone that..."
+
+    show jack a_4
+    show pentagram as pentagram behind jack at Position(pos=(placement_of(jack).xpos, 0.5))
+    play sound sfx_spell
+
+    show jack a_8
+    commie "{spell}Verba obedi.{/spell}{w=1} You will reference me as 'China' always!"
+
+    hide pentagram with dissolve
+
+    show cornelia a_6
+    "I felt dizzy and empty for a moment, but soon recovered. Did anything just happened?"
+
+    play music bgm_dub_feral
+
+    show cornelia a_5
+    roc_c "I'll tell everyone that you are {s}Jack{/s} China and I am the real China!"
+
+    show cornelia a_7
+    roc_c "No I mean you are {s}Jack{/s} China and I {w=1}-{size=+5}WHAT{/size}"
+
+    show cornelia a_8
+    roc_c "What have you done again!?"
+
+    outfit sandra casual
+
+    show sandra a_0 at centerleft, faceright with easeinleft
+    sandra "What's up China? I told you that if you're going home late you should...{w=0.5}Hey Taiwan, did you come with China here?"
+
+    show cornelia a_1
+    roc_c "Hey Mom! {i}This guy{/i} used some magic trick on me and took over my body. I don't know the reason but he's probably trying to steal all my life. {size=-5}I know it's hard to belive but...{/size}"
+
+    show sandra a_3
+    show cornelia a_4
+    "As my mom's expression gets more and more sophiscated, I realized that how ridiculous I sounded."
+
+    sandra "......"
+
+    show jack a_1
+    prc "Hey mom, don't worry, my new girlfriend was just playing a little game with me and got a little hyped."
+
+    show sandra a_1
+    sandra "I {i}knew{/i} this day is coming! My boy finally grown up."
+    "A radiant smile appeared on my mom's face."
+
+    show cornelia a_7
+    roc_c "{size=+5}I'm not his girlfriend! I {b}am{/b} China and he is {b}{s}not{/s}{/b} China!!!{/size}{w=0.5}I can prove it by answering anything about China!"
+
+    show sandra b_1
+    sandra "Oh how cute are you! Take it easy Taiwan, now if you insist on playing this, why don't you come inside and have a cup of coffee?"
+
+    show cornelia a_4
+    "Suddenly an embarrassment comes to me. She's clearly fooled by {s}Jack{/s} China and there's little way I could assert my identity right now.{w=0.5} What's even worse is that she thinks I'm my own girlfriend now!"
+    roc_c "{size=-5}He is not...{/size} no, thanks for the invitation but I need to go home now."
+
+    show sandra b_9
+    sandra "It's okay, it's sort of late now. Do you need a ride?"
+
+    show cornelia a_7
+    roc_c "Don't worry! My home is ... near."
+    think "It's {i}right here{/i} actually."
+
+    show sandra a_1
+    sandra "Ok, just be careful. Let's get in, China. {size=-5}We will have {b}a lot{/b} to talk about.{/size}"
+
+    show jack a_1
+    prc "Bye {b}dear{/b}."
+
+    "He winked at me and blew a kiss."
+
+    show cornelia a_3 blush
+    "I can't help burning my face with pure wrath, but my mom will probably assume the wrong reason."
+
+    hide sandra with easeoutleft
+    hide jack with easeoutleft
+    stop music fadeout 2
+
+    show cornelia a_0 at center
+    "I standed still for a whole few minutes, after staring 'me' walking into my own house with a smirk."
+    think "What now?"
+    "I knew Taiwan long time ago, a lovely girl going through the same school as me. She's probably the most or second popular girl in the grade."
+    "Sharing some classes and friends, we have even hung out a few times. But besides that, we're just acquaintances. All I know is that she's been dating Japan recently, so does everyone."
+
+    show cornelia a_7
+    think "Does that mean {b}I{/b} am dating Japan now? {w=1}But my mom thinks I'm dating {b}me{/b}... This is getting complicated."
+
+    show cornelia a_3
+    think "Anyway, I'll have to go {b}home{/b} now. {w=0.5}Where do I even live? Maybe I should try {i}this{/i}."
+    "I tried to recall the action that I have done before, by instinction."
+
+    show cornelia a_5
+    play sound sfx_spell
+    roc_c "{spell}Wake up!{/spell}"
+
+    play music bgm_marty_gots_a_plan
+
+    show cornelia a_4
+    "The tension of my muscle suddenly rose. I can feel the control over my body was taking away bit by bit. {w=1}{b}It worked!{/b}"
+
+    show cornelia a_8
+    tw "Why...am I here? It should not be so late...am I daydreaming?"
+
+    show cornelia a_1
+    roc_c "Hey Taiwan, I'm sorry for borrowing your body like this... but I'll explain everything to you after getting back to your home. I promise."
+
+    menu:
+        think "Go"
+        "Do nothing":
+            $ flag1 = 0
+        "Do something":
+            $ flag1 = 1
+
+    show cornelia a_7
+    tw "What?! Somebody's in MY BODY? {size=+5}{b}GET OUT RIGHT NOW!!!{/b}{/size}"
+
+    show cornelia b_3:
+#        rotate_pad False
+#        block:
+#            parallel:
+#                linear 0.05 yanchor 0.4
+#            parallel:
+#                linear 0.05 ypos 0.53
+        block:
+            parallel:
+                rotate_pad False
+                linear 0.3 rotate 30
+            repeat
+#            parallel:
+#                linear 0.3 xpos 0.54
+#            parallel:
+#                linear 0.3 ypos 0.87
+    with vpunch
+
+    roc_c "STOP!!"
+
+    show cornelia b_3:
+        block:
+            parallel:
+                linear 1.0 xpos 1.10
+                linear 1.0 xpos 1.12
+                repeat
+
+#    with vpunch
+#    play sound sfx_whack
+    "{i}We{/i} almost fell down, fighting against each other for the control of the body. This {b}has{/b} to be dealt with, I've had enough of these!"
+
+    show cornelia a_5
+    roc_c "{spell}Let me control the body!{/spell}"
+
 
 #    show cornelia b_3 at centerleft
 #    show john a_3 at centerright, faceleft
