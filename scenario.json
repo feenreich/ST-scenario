@@ -1,13 +1,13 @@
 {
-    "description": "Description", 
-    "title": "Test", 
+    "description": "This is a story based on the history of Taiwan",
+    "title": "ROC",
     "tags": [
-        "tag1", 
-        "tag2", 
-        "tag3"
-    ], 
-    "label": "scenario_test", 
-    "prefix": "tst", 
-    "version": "0.0.1", 
-    "author": "Me"
+        "possession",
+        "mind control",
+        "history"
+    ],
+    "label": "scenario_roc",
+    "prefix": "tw",
+    "version": "0.0.1",
+    "author": "feenreich"
 }
