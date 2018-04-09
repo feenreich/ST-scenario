@@ -8,6 +8,11 @@ define roc_c = FakePerson("China", "cornelia")
 define tw = FakePerson("Taiwan","cornelia")
 
 label scenario_roc:
+    $ flag_tw = 0
+    $ flag_cn = 0
+    $ flag_jp = 0
+    $ flag_usa = 0
+    $ flag_roc = 0
     outfit john casual
     scene example_bg street night
     play music bgm_mirage
@@ -46,7 +51,7 @@ label scenario_roc:
     roc "If {i}that{/i} didn't happen..."
 
     scene shrine day
-    play music bgm_mirage
+    play music bgm_dark_fog
 
     show john a_7 at centerleft with easeinleft
     show jack a_9 at centerright with easeinright
@@ -218,13 +223,13 @@ label scenario_roc:
                 linear 0.3 ypos 0.6
     with MoveTransition(1.5)
 #    show cornelia a_5 at centerleft with MoveTransition(1.5)
-    "I bearly get up from my tiny arms."
+    "I barely get up from my tiny arms."
 
     show cornelia a_0
     roc_c "Wow these hands are ... {i}small{/i}."
 
     show cornelia a_5
-    "A high-pitched feminine voice run through my scalp in a weird but rather familiar way. Is someone talking?"
+    "A familiar high-pitched feminine voice run through my skull in a weird fashion. Is someone talking?"
 
     show cornelia a_1
     roc_c "And the school gate looks {i}huge{/i}!"
@@ -249,6 +254,7 @@ label scenario_roc:
     show cornelia b_5 faceleft
     think "NO WAY I'm staying like this, I gotta find {i}HIM{/i} as soon as possible!"
     "I started running, barely maintaining the balance. I wonder if this really counts as a run since each step of mine was so small and I can't really accelerate."
+    play sound sfx_running
 
     scene black with dissolve
     stop music fadeout 1.5
@@ -275,7 +281,7 @@ label scenario_roc:
     commie "I have no idea what you're talking about, Taiwan?"
 
     show cornelia a_3
-    roc_c "Don't call me {i}that{/i}! I'm {b}China{/b}!"
+    roc_c "Stop calling me {i}that{/i}! I'm {b}China{/b}!"
 
     show jack a_3
     commie "Oh, if you are China, then who am {b}I{/b}, then?"
@@ -328,7 +334,7 @@ label scenario_roc:
     "A radiant smile appeared on my mom's face."
 
     show cornelia a_7
-    roc_c "{size=+5}I'm not his girlfriend! I {b}am{/b} China and he is {b}{s}not{/s}{/b} China!!!{/size}{w=0.5}I can prove it by answering anything about China!"
+    roc_c "{size=+5}I'm not his girlfriend! I {b}am{/b} China and he is {b}{s}not{/s}{/b} China!!!{/size}{w=0.5} I can prove it by answering anything about China!"
 
     show sandra b_1
     sandra "Oh how cute are you! Take it easy Taiwan, now if you insist on playing this, why don't you come inside and have a cup of coffee?"
@@ -359,18 +365,18 @@ label scenario_roc:
     hide jack with easeoutleft
     stop music fadeout 2
 
-    show cornelia a_0 at center
+    show cornelia a_0 at center with ease
     "I standed still for a whole few minutes, after staring 'me' walking into my own house with a smirk."
     think "What now?"
     "I knew Taiwan long time ago, a lovely girl going through the same school as me. She's probably the most or second popular girl in the grade."
     "Sharing some classes and friends, we have even hung out a few times. But besides that, we're just acquaintances. All I know is that she's been dating Japan recently, so does everyone."
 
     show cornelia a_7
-    think "Does that mean {b}I{/b} am dating Japan now? {w=1}But my mom thinks I'm dating {b}me{/b}... This is getting complicated."
+    think "Does that mean {b}I{/b} am dating Japan now? Arrrgh that's fucking disgusting. {w=1}But my mom thinks I'm dating {b}me{/b}... This is getting complicated."
 
     show cornelia a_3
-    think "Anyway, I'll have to go {b}home{/b} now. {w=0.5}Where do I even live? Maybe I should try {i}this{/i}."
-    "I tried to recall the action that I have done before, by instinction."
+    think "Anyway, I gotta take a rest somewhere. {w=0.5}Where does she live? Maybe I should try {i}this{/i}."
+    "I try to redo the maneuver that I have taken before, by instinction."
 
     show cornelia a_5
     play sound sfx_spell
@@ -387,60 +393,230 @@ label scenario_roc:
     show cornelia a_1
     roc_c "Hey Taiwan, I'm sorry for borrowing your body like this... but I'll explain everything to you after getting back to your home. I promise."
 
-    menu:
-        think "Go"
-        "Do nothing":
-            $ flag1 = 0
-        "Do something":
-            $ flag1 = 1
-
     show cornelia a_7
-    tw "What?! Somebody's in MY BODY? {size=+5}{b}GET OUT RIGHT NOW!!!{/b}{/size}"
+    tw "What?! Somebody's in MY BODY? {size=+5}{b}GET OUT YOU PERVERT!!!{/b}{/size}"
 
     show cornelia b_3:
-#        rotate_pad False
-#        block:
-#            parallel:
-#                linear 0.05 yanchor 0.4
-#            parallel:
-#                linear 0.05 ypos 0.53
-        block:
-            parallel:
-                rotate_pad False
-                linear 0.3 rotate 30
-            repeat
-#            parallel:
-#                linear 0.3 xpos 0.54
-#            parallel:
-#                linear 0.3 ypos 0.87
+        xalign 0.45
+        linear 1.0 xalign 0.55
+        faceleft
+        linear 1.0 xalign 0.45
+        faceright
+        repeat
     with vpunch
 
-    roc_c "STOP!!"
+    roc_c "STAROP!!IAU WILFLFA EXPLARATIHIN!"
 
-    show cornelia b_3:
-        block:
-            parallel:
-                linear 1.0 xpos 1.10
-                linear 1.0 xpos 1.12
-                repeat
+    "I felt almost crumbled fighting against each other for the control of the body. I can't even speak normally."
 
-#    with vpunch
-#    play sound sfx_whack
-    "{i}We{/i} almost fell down, fighting against each other for the control of the body. This {b}has{/b} to be dealt with, I've had enough of these!"
+    menu:
+        think "This {b}must{/b} be dealt with, I've had enough of these bullshit allday!"
+        "Let her control the body":
+            placeholder
+        "Use my power":
+            show cornelia a_5 at center with ease
+            play sound sfx_spell
+            show cornelia a_0
+            roc_c "{spell}Let me control and get your memories!{/spell}"
+            "While the moving of my body finally stopped, I can still feel the quivering of my feet and the anger piling up my stomach."
+            "Part of me felt bad, but I cannot just let her do whatever she want. Afterall, my existence itself is in a huge pinch!"
+#            roc_c "{b}You will control the body only when I allow it.{w=1} You will go home now.{/b}"
+
+    scene black with dissolve
+    stop music fadeout 2
+
+    show cornelia a_8 at center with vpunch
+    "A lot of images and voices flooded into my mind. I can hardly perceive them as any meaningful information. My vision was twisted and I felt nausea. I almost regretted the choice immediately."
+    "Right before I was about to vomit, the world regains its order and turned into tranquility."
+
+    scene bg main house dark with dissolve
+
+    "I give a query to my brain about {b}home{/b}. Some vague images come up one by one, almost like a 3D google map."
+    think "Guess the magic worked, again."
+    hide cornelia
+
+    scene bg city walkway night with dissolve
+    scene black with dissolve
+
+    "Following the VR-map, I reached the destination after about a quarter."
+
+    scene bg neighborhood2 night
+    show cornelia a_0 at center
+#    tw "{i}Fine. I hope you really have a good excuse for this, asshole.{/i}"
+    "It is a house of mediocre size. Somehow it looked familiar, although it's the first time I have been here. I took out the key inside my bag and entered the house by instinction."
+    "I quickly slipped into my room - Taiwan's room, avoiding possible encounter of her family."
+#    "I smiled wryly, letting my leg starts moving on its own. It felt like riding a tandem bike without pedalling. I felt really tired and let my consciouness go."
+    play sound sfx_sliding_door_open
+    scene bg yui room night table
+    play music bgm_comfortable_mystery
+    show cornelia a_0 at center
+
+    think "What a long day..."
+    "It has been such a bizarre day that I finally get the leisure to ruminate my situation."
+    think "My body was stolen, by {s}Jack{/s} China, who claims himself to be a wizard as well as myself. He also convinced my mom that he is me and {b}I{/b} am his girlfriend."
+
+    show cornelia a_4
+    think "And I am now ... Taiwan, a girl I am not even familiar with."
+    "I walk up to a mirror. A solemn girl frowns towards me. I wave to her and she waves back simultaneously. She sighed as I heard the voice."
 
     show cornelia a_5
-    roc_c "{spell}Let me control the body!{/spell}"
+    "Sensations flowing in as I focus into myself. The school uniform feels tighter than usual, except that the lower part only feels empty."
+    "The attachment around my breasts is even tighter, which make me uncomfortable. I start to strip. The bra takes some work, but the memory of Taiwan helps."
+
+    outfit cornelia none
+    show cornelia b_7
+    "A beautiful body appears right in front of me in the mirror."
+    think "Gosh I am gorgeous... I mean {i}she{/i} is."
+
+    show cornelia b_9
+    "I almost stopped breathing for a while. This is the first time seeing a female nuked body in reality, well excluding my mom. But also in first-person viewpoint."
+    "She is petite and curvy. The boobs is of mediocre size that can be held in one hand, on top of it were two little cute pink nipples standing tall, as if showing of their existence."
+
+    show cornelia a_1
+    "However, there is no sensation of erection. I looked down seeing nothing between my crotch."
+
+    stop music fadeout 2
+    menu:
+        think "I should"
+
+        "Explore more":
+            $ flag_tw += 1
+            play music bgm_easy_lemon
+
+            show cornelia a_9
+            "Besides the absent of my old partner, I can feel a drop of liquid on my thigh - my ... pussy is soaking wet!"
+
+            think "I have to do this."
+
+            "Since I don't have the technique nor experience of pleasing a woman, I searched through the memory of Taiwan."
+
+            show cornelia a_6 with vpunch
+            think "Argh.."
+            "Flooding in my mind was the sight of Japan, naked, pounding against me heavily on the bed, again and again. I - Taiwan screamed out of both pleasure and pain. Looks like this is her first time scenario."
+            "I moaned while surrounding his wide back with my slim arms."
+
+            show cornelia b_2
+            roc_c "That was a good night!"
+
+            show cornelia a_3 with hpunch
+            roc_c "NO! THAT'S FUCKING DISGUSTING!"
+            "I shaked my head furiously, getting rid of the images. Looks like she's never do it herself but with Japan. I felt vomit."
+
+            show cornelia a_2
+            think "Well guess I have to try it myself then."
+
+            show cornelia a_0
+            "I slipped my finger onto the bulge, lying on the place supposed to be my penis."
+            think "This is ... clitoris?"
+
+            show cornelia a_9:
+                block:
+                    easein 1.8 xpos 0.49
+                    easein 1.8 xpos 0.50
+                    easein 1.8 xpos 0.51
+                    easein 1.8 xpos 0.50
+                    repeat
+
+            roc_c "Ugh...{w=1}ugh..."
+            "As I caress it, an electronic-alike sensation flow through. It's like the glans, but more sensitive and soft."
+            show cornelia a_3
+            roc_c "Auch!"
+            "A prickling emerges as I put too much force rubbing it. Looks like it is much more delicate than my original counterpart."
+            show cornelia a_1
+            think "I should be more careful."
+            show cornelia a_9
+            roc_c "Unmm...{w=1}yes...{w=1}yes..."
+            "My mouth moved itself unconsciously, but I'm not bothered."
+            roc_c "More...{w=1}more..."
+            "My hands accelerate according to my desire."
+
+            show cornelia a_9:
+                block:
+                    easein 2.8 xpos 0.49
+                    easein 2.8 xpos 0.50
+                    easein 2.8 xpos 0.51
+                    easein 2.8 xpos 0.50
+                    repeat
+            roc_c "Ahhhnmnmmmm~~"
+            "I quivered as the feeling adding up. A huge spike of bliss went through my head."
+
+            hide cornelia
+            scene black with dissolve
+            "I reached orgasm, as a female, as Taiwan."
+            stop music fadeout 1.5
+
+            scene bg yui room night table with dissolve
+            show cornelia a_1 at center
+            "Although there is no significant physical change around my body, I suddenly lost the will to keep rubbing."
+            think "I heard that female are able to cum multiple times...maybe I should try the vagina part as well?"
+            "I looked at my crack and enlarged it with my fingers. It's certainly tempting, but I'm kinda terrified by the idea to put something into it."
+            show cornelia a_8
+            "Especially the {i}last time{/i} it was that fucking guy ... Japan's {b}stuff.{/b} According to her memory."
+            show cornelia b_3
+            roc_c "I'm definitely breaking up with him!"
 
 
-#    show cornelia b_3 at centerleft
-#    show john a_3 at centerright, faceleft
-#    swap john a_0 : a_1, cornelia a_1 : a_0
-#    cornelia "When you swap bodies, you also swap expression banks, so you have to use the expressions that are native to the body and not the person."
-#    john "Now that I'm in Ms. Winter's body, I can make her {q}b{/q} expression by putting {q}show john b_1{/q} above my text."
+        "Get dressed":
+            $ flag_tw = 0
+            show cornelia a_5
+            think "It is not righteous to do this, I have already done something horrible to her. The moment I find a way to my own body, I will leave and apologize to her."
 
-#    show john b_1
-#    roc_c "This feels {i}weird{/i}."
+    play music bgm_mirage
+    show cornelia a_5
+    think "Wait, maybe I can just leave the body and get a {i}boy{/i}'s body instead?"
+    show cornelia a_0
+    think "{b}{size=+5}Leave!{/size}{/b}"
+    show cornelia a_7
+    roc_c "{b}{size=+5}Leave!{/size}{/b}"
+    show cornelia a_0
+    think "Okay I must looked like an idiot."
+    "Maybe it's that I don't know the right chanting, or my powers are restricted. It didnt' work. I gave up after a few try."
+    think "It's getting cold in the night, I should find something to wear."
 
+    play sound sfx_sizzle
+    outfit cornelia pajamas
+    show cornelia a_1 at center
+
+    "It is not hard to find the pajamas Taiwan always wear through the memory. The silky soft touch was really nice, unlike my own one."
+    show cornelia a_2
+    think "This feels so good!"
+    "Is it only she, or the female pajamas are just softer overall? I pondered."
+
+    show cornelia a_6
+    roc_c "Arrrrmmmmm"
+    "A large yawning sound reminds me of how tired I am. I should go to bed, there is still school tomorrow."
+
+    show cornelia a_0
+    think "Am I gonna go to school as {i}she{/i}? It seems the only choice I have but...{w=0.5}{b}GOSH{/b}, whatever. I'll just go to bed."
+
+    show cornelia a_6
+    think "Maybe the whole day has been just a weird dream and I'll wake up just as everyday. I can share the tale to Katrina or Kiyoshi, they might mock on me but I won't mind that much, I guess."
+    nvl clear
+    nvl_narrator "I closed the light and laid to bed. The scent of Taiwan on the pillow is both novel and familar."
+    if flag_tw > 0:
+        nvl_narrator "I recalled Japan laid with me on the very same place, hugging me tightly."
+        nvl_narrator "That jerk always bullies me at school...has a tender side as well, just like everyone."
+        nvl_narrator "Maybe its Taiwan's soul inside me effecting, he's image does not look hateful as usual."
+        nvl_narrator "However I still make up my mind to get my body back as soon as possible."
+#    nvl_narrator "I made up my mind to get my body back"
+    else:
+        nvl_narrator "The bed is comfortable, I fell asleep right away."
+
+    stop music fadeout 1.5
+    scene black with dissolve
+    ".{w=0.5}.{w=0.5}.{w=0.5}"
+
+    scene bg yui room day table with dissolve
+    play music bgm_airport_lounge
+    ".{w=0.5}.{w=0.5}.{w=0.5}"
+
+#    "I felt something rubbing my body. The unusual tightness around my upper body, especially the breast part got released, soon replaced by a soft and silky touch."
+#    "As I opened my {i}mind eyes{/i}."
+
+
+#    tw "You woke up, didn't you?{w=1}Who are you and why are you doing this!?"
+#    "In the next few minutes, I told her the whole story - from my crazy uncle, my magical power, to my stolen identity and my deceived mother."
+#    "She seems rather calm, to be honest, the situation of her is kinda similar to me. Although the story is hard to belive, its even more difficult to deny the reality."
 
 
     placeholder
