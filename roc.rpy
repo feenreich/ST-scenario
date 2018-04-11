@@ -431,7 +431,7 @@ label scenario_roc:
 
     scene bg main house dark with dissolve
 
-    "I give a query to my brain about {b}home{/b}. Some vague images come up one by one, almost like a 3D google map."
+    "I gave a query to my brain about {b}home{/b}. Some vague images flowed up one by one, almost like a 3D google map."
     think "Guess the magic worked, again."
     hide cornelia
 
@@ -457,23 +457,23 @@ label scenario_roc:
 
     show cornelia a_4
     think "And I am now ... Taiwan, a girl I am not even familiar with."
-    "I walk up to a mirror. A solemn girl frowns towards me. I wave to her and she waves back simultaneously. She sighed as I heard the voice."
+    "Walking up to a mirror of my height, I saw a solemn girl frowning at me. I waved to her and she waves back simultaneously. She sighed as I heard the voice."
 
     show cornelia a_5
-    "Sensations flowing in as I focus into myself. The school uniform feels tighter than usual, except that the lower part only feels empty."
+    "Sensations flowing in as I finally focus into myself. The school uniform feels tighter than usual, except that the lower part only feels empty."
     "The attachment around my breasts is even tighter, which make me uncomfortable. I start to strip. The bra takes some work, but the memory of Taiwan helps."
 
     outfit cornelia none
     show cornelia b_7
-    "A beautiful body appears right in front of me in the mirror."
+    "A beautiful dainty body appears right in front of me in the mirror."
     think "Gosh I am gorgeous... I mean {i}she{/i} is."
 
     show cornelia b_9
-    "I almost stopped breathing for a while. This is the first time seeing a female nuked body in reality, well excluding my mom. But also in first-person viewpoint."
-    "She is petite and curvy. The boobs is of mediocre size that can be held in one hand, on top of it were two little cute pink nipples standing tall, as if showing of their existence."
+    "I almost stopped breathing for a while. This is the first time I see a female body naked in reality, well excluding my mom. But also in first-person view."
+    "She is petite but also curvaceous. The boobs is of mediocre size that can be held in one hand - my original hand, on top of it were two little cute pink nipples standing proudly showing of their existence."
 
     show cornelia a_1
-    "However, there is no sensation of erection. I looked down seeing nothing between my crotch."
+    "However, there is no sign of erection. I looked down only seeing nothing between my crotch."
 
     stop music fadeout 2
     menu:
@@ -595,7 +595,7 @@ label scenario_roc:
     nvl_narrator "I closed the light and laid to bed. The scent of Taiwan on the pillow is both novel and familar."
     if flag_tw > 0:
         nvl_narrator "I recalled Japan laid with me on the very same place, hugging me tightly."
-        nvl_narrator "That jerk always bullies me at school...has a tender side as well, just like everyone."
+        nvl_narrator "That jerk always bullies me at school...has a tender side as well."
         nvl_narrator "Maybe its Taiwan's soul inside me effecting, he's image does not look hateful as usual."
         nvl_narrator "However I still make up my mind to get my body back as soon as possible."
 #    nvl_narrator "I made up my mind to get my body back"
@@ -609,6 +609,90 @@ label scenario_roc:
     scene bg yui room day table with dissolve
     play music bgm_airport_lounge
     ".{w=0.5}.{w=0.5}.{w=0.5}"
+
+    show cornelia a_2 at center
+    roc_c "*Yawn"
+    "I stretched my body."
+    show cornelia b_2
+    roc_c "What a nice morning."
+    "Warming sunshine pierces through the curtain. I felt cozy but in the mean time."
+    show cornelia a_5
+    roc_c "Do I have a curtain?..."
+    show cornelia a_7
+    think "Oh no! This is not my room. I haven't get my body back from that asshole yet!"
+    show cornelia a_4
+    "I quickly put on the school uniform...Taiwan's of course. The white stockings is quite repelling, but I feel like putting the usual suit of her might be better so I endured it."
+    show cornelia a_3
+    "Again the tightening bra make me itchy that I almost wanted to skip it."
+    outfit cornelia uniform
+    show cornelia a_5
+    think "It's really harsh for girls to wear them {b}every day{/b}. My - I mean her breasts are not huge but still it's not pleasing. Maybe I'll just wear the sports bra later on."
+    show cornelia b_1
+    "My hands tied my hair to the double ponytail naturally."
+    show cornelia a_7
+    think "Is Taiwan inside of me doing this? What happened to her actually, is she sleeping or aware of all of these?"
+    "Anyway, I should departure. I don't want to confront her parents or siblings yet, even if that means skipping the breakfast. What class does she have today?..."
+    "I examined the memory. The schedule of her usual day came into my mind."
+    show cornelia a_0 with vpunch
+    think "I see...let's go."
+    play sound sfx_door_open
+    stop music fadeout 2
+
+
+    scene bg school entrance day with dissolve
+    play music bgm_cut_and_run
+
+    show jack a_0 at center
+    show kiyoshi a_0 at centerright, faceleft
+    show cornelia b_0 at centerleft with easeinleft
+    "Upon reaching the school entrance, I saw two familiar faces - one of my best male friend Kiyosi and the one I've only seen in the mirror before yesterday."
+    show cornelia b_3
+    roc_c "{size=+5}Hey, what the heck are {i}you{/i} doing here!{/size}"
+    show kiyoshi a_3
+    show jack a_1 at faceleft
+    prc "Morning, dear. I know you would've missed me so much."
+    show kiyoshi a_1
+    kiyoshi "I can't believe it is true, C-man. You really take Taiwan from Japan! Looks like I underestimated your Man-Power."
+    roc_c "Don't call me C-man, I've told you many many times."
+    show kiyoshi a_2
+    kiyoshi "Ha C-man, she's acting so well just as you said!{w=1} Morning mi-lady Taiwan - or should I call you C-woman?"
+    roc_c "I'm {b}NOT{/b} a woman and I'm not acting! This guy is just a body stealer, I promise that I can prove it! Just ask him anything only I-China and you knows, he wouldn't be able to answer but {b}I{/b} can!"
+    show kiyoshi a_0
+    kiyoshi "Humm, really interesting C-man. How do you come up with this sort of play without my wisdom advice?"
+    show jack a_1
+    prc "Well while I was left idle and you're busy dealing with the lawn mower trying to communicate with alien last week. By the way only you and me knows the episode right?"
+    show kiyoshi a_1
+    kiyoshi "Ha, sasuga my C-man. Lady Taiwan you just missed one point!"
+    show cornelia a_8
+    roc_c "No...he must have stalked into my memory, that's it! He is really not {b}me{/b}! You gotta believe me ... Kiy-master!"
+    show kiyoshi a_1 with vpunch
+    kiyoshi "Wow, finally my expertise has made its fame to the entire school! Nice try Taiwan-chan. Let me ask...what is the lawn-mower's color?"
+    show cornelia a_2
+    think "Nice job Kiyoshi, I can finally prove my identity! A normal people wouldn't have belived me but its Kiyoshi - the sci-fi maniac Kiymaster!"
+    roc_c "The color is green! Also you carved a Chinese Character meaning 'ten thousand' on the turf. You gotta definitely belive me now, right?"
+    show jack a_3
+    show kiyoshi a_3
+    kiyoshi "Wow, I didn't expect you to be so detailed! However you have lost Fake-China-chan, the lawn mower is blue and I what carved is 'dragon'!"
+    show kiyoshi a_0
+    kiyoshi "I can still call you Miss-China though, if you want, mi-lady."
+    show cornelia a_7
+    think "What?! This cannot be, I clearly remembered...it's just last week!"
+    "I saw a smirk on 'China's face."
+    think "I suppose he did {i}something{/i} on Kiyoshi, maybe modified his memory with magic or something like that. However there's no way to verify it."
+    show cornelia a_4
+    think "Great, now I have no way to prove myself without using the power. But I don't know how to use it besides commanding Taiwan through out pure will."
+    show cornelia a_5
+    think "Maybe it's because my soul is in her body so no incantation is required? sounds Logic."
+    show cornelia a_3
+    roc_c "You'll REGRET it!"
+    "Anyway, I have lost the incentive to stay with them. I growled at 'China' and walked straight pass them into the school."
+    show cornelia b_3 at faceleft with easeoutleft
+
+    stop music fadeout 1.5
+    scene bg school classroom hallway day with dissolve
+    play music bgm_hackbeat
+    show cornelia a_0 at center
+    "The first class is..."
 
 #    "I felt something rubbing my body. The unusual tightness around my upper body, especially the breast part got released, soon replaced by a soft and silky touch."
 #    "As I opened my {i}mind eyes{/i}."
