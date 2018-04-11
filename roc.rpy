@@ -684,9 +684,10 @@ label scenario_roc:
     show cornelia a_5
     think "Maybe it's because my soul is in her body so no incantation is required? sounds Logic."
     show cornelia a_3
-    roc_c "You'll REGRET it!"
     "Anyway, I have lost the incentive to stay with them. I growled at 'China' and walked straight pass them into the school."
-    show cornelia b_3 at faceleft with easeoutleft
+    roc_c "You'll REGRET it!"
+    show cornelia b_3 at faceleft
+    hide cornelia with easeoutleft
 
     stop music fadeout 1.5
     scene bg school classroom hallway day with dissolve
