@@ -67,18 +67,18 @@ label scenario_roc:
     play sound sfx_spell
     commie "{spell}Relinquo Spiritus!!{/spell}"
 
-    clone katrina john
+    clone alex john
     hide john
-    show katrina a_0 at centerleft
+    show alex a_0 at centerleft
 
     exspirit jack a_3
 
     show jackGhost a_1
     commie "haha"
 
-    possess jack katrina a_4
+    possess jack alex a_4
     hide jack
-    hide katrina
+    hide alex
 
     show john a_1 at centerleft
     commie "HaHaHaHaHaHaHaHaHa"
@@ -669,7 +669,7 @@ label scenario_roc:
     kiyoshi "Wow, finally my expertise has made its fame to the entire school! Nice try Taiwan-chan. Let me ask...what is the lawn-mower's color?"
     show cornelia a_2
     think "Nice job Kiyoshi, I can finally prove my identity! A normal people wouldn't have belived me but its Kiyoshi - the sci-fi maniac Kiymaster!"
-    roc_c "The color is green! Also you carved a Chinese Character meaning 'ten thousand' on the turf. You gotta definitely belive me now, right?"
+    roc_c "The color is green! Also you carved a Chinese Character meaning 'ten thousand' on the turf. You gotta definitely belive me now, right?"
     show jack a_3
     show kiyoshi a_3
     kiyoshi "Wow, I didn't expect you to be so detailed! However you have lost Fake-China-chan, the lawn mower is blue and I what carved is 'dragon'!"
@@ -692,8 +692,175 @@ label scenario_roc:
     stop music fadeout 1.5
     scene bg school classroom hallway day with dissolve
     play music bgm_hackbeat
+
+    show cornelia a_0 at center with easeinleft
+    show cornelia a_1
+    think "Her first class is...math, the same as mine. Great, if I can convince the teacher my real identity, I might get some help!"
+    show sayaka a_1 at centerleft with easeinleft
+    sayaka "Morning lil' bitch, why you look so blank? finally got dumped by Japan?"
+    show cornelia a_7
+    think "Oh shit! She's Taiwan's friend, Sayaka, probably the most popular girl at school. Taiwan has always been her lackey."
+    think "Sayaka has been quite mean to students in the lower pyramid. Although their relation is good, the harsh tongue of Sayaka doesn't change looks like."
+    roc_c "Nah, I was just feeling a bit...off I guess."
+    show sayaka a_2
+    sayaka "Ha, I thought {b}baka{/b} like you will never get sick! Anyway I gotta go, take care of yourself.{w=0.5} Go to the infirmary if necessary, I'll tell the teachers."
+    hide sayaka with easeoutleft
+    show cornelia a_2
+    roc_c "No need right now, thanks. See'ya."
+    show cornelia a_0
+    think "Glad that she didn't ask much, I'm kinda nervous talking to such a pretty girl like her.{w=0.5} Besides the joking attitude, she does seem to care about her friend's health condition."
+    show cornelia a_4
+    think "However it's quite frustrating she doesn't even doubt that I'm actually not her usual accompany."
+    think "How do I even convince anyone, if {s}Jack{/s} China insists to obscure with his power anyway?"
+    play sound sfx_bell
+    show cornelia a_0
+    roc_c "The class is starting soon, let's solve the problem later."
+    hide cornelia with easeoutright
+
+    scene bg classroom 1 with dissolve
+    show cornelia b_1 at center with easeinleft
+    menu:
+        think "I should sit at"
+        "{b}My{/b} seat!":
+            $ flag_cn += 1
+            show cornelia b_1 at centerright with ease
+            "I went to my usual seat without hesitation."
+            show connie a_0 at right
+            connie "Wrong seat Taiwan. It's already middle of the semester, pay some attention please."
+            show cornelia a_7 at center with ease
+            roc_c "But this ... I ... {size=+5}I was supposed to sit here! {b}Belive it or not{/b}!{/size}"
+            "I can hear classmates snickering behind me. I know it sounded stupid, but I can't just do {b}nothing{/b}! I have to remind them, metaphorically or not."
+            show connie a_1
+            connie "Well, I don't think China own such a high grade that you eager to be in his position so much."
+            show connie a_5
+            connie "However since he is still absent, I will let you stay there. If you just want to get closer to the blackboard then just state it."
+            show cornelia a_3
+            think "What, she thinks I was too short to see the chalkboard clear enough?! How can this dumb woman be my math teacher!"
+            show cornelia a_5
+            roc_c "No, I just want to sit {size=+5}here{/size}. This place belongs to me!"
+            "I can hear the crowd whispering and girls gasping. But I don't care, it's {b}truth{/b}!"
+            show connie a_2
+            connie "Fine, just get out when China is back."
+            hide cornelia
+            show connie b_0 at center, faceleft with ease
+            connie "Okay guys be quiet, where did we end last time? ... As I mentioned before, complex numbers can sometimes be very tricky ..."
+            "And the class began. My body never showed up, I don't really want to confront him but that still annoyed me. That body-thief just make {b}me{/b} ditched the class! What is he doing!"
+            show katrina a_4 at centerleft with ease
+            "And the piercing glance from Katrina -my best female friend- from behind also made me quite nervous. I haven't revealed myself to her, did she have some repulsion against Taiwan?"
+            hide katrina at ease
+
+        "{s}My seat.{/s}":
+            placeholder
+            "I went to Taiwan's seat after some struggle. I cannot just go to my own seat cause it will be too weird."
+
+    ".{w=0.5}.{w=0.5}."
+    show connie a_0
+    connie "Okay that'll be it today, don't forget that we'll have a test next week."
+    "I can hear groaning and moaning all around."
+    show connie a_1
+    connie "If you don't prepare enough, your {i}imaginary{/i} problem might become {i}real{/i}!"
+    "The class went silence, is there crow cawing?"
+    show connie a_2
+    connie "{size=-5}I thought this one was funny, though.{/size}"
+    hide connie at ease
+    stop music fadeout 1.5
+
+    scene bg school classroom hallway day with dissolve
+    play music bgm_hidden_agenda
+
+    show cornelia b_0 at center with easeinleft
+    show katrina b_3 at centerleft with easeinleft
+    katrina "Hey, Taiwan!"
+    show cornelia a_1
+    roc_c "Hi Kat.. Katrina, what's up?"
+    show katrina a_4
+    katrina "What what's up! Where's China and what's your demeanor today? What happened between you and China?!"
+    show cornelia a_7
+    think "!!! {b}CHANCE{/b}. I've heard that girls are more sensitive and awaring of little changes of a person, I guess it's true!"
+    show cornelia a_2
+    roc_c "Kat! I KNEW you'll find me, let's talk at some secret place."
+    show katrina a_5
+    katrina "Okay, {w=1}...Kat?"
+    hide cornelia with easeoutright
+    hide katrina with easeoutright
+
+    scene bg school bathroom day with dissolve
+    show cornelia b_0 at center with easeinleft
+    show katrina b_0 at centerleft with easeinleft
+    "We went to the women's restroom, the nearest quiet place I can find."
     show cornelia a_0 at center
-    "The first class is..."
+    show katrina a_4 at centerleft
+    katrina "So what is this all about?"
+    show cornelia a_4
+    roc_c "It's a long story...Please listen and belive me."
+    show katrina a_0
+    katrina "I'll do it."
+    "I elaborated everything, from the awful encounter of my uncle Jack -who I used the phrase 'body-stealer' to describe avoiding the magic effect-, my accidental residence on Taiwan's body, my deceived mom, the memories of Kiyoshi, to the shenanigan just occurred."
+    if flag_tw > 0:
+        "Omitting the little fun last night of course."
+    show katrina a_3
+    show cornelia a_8
+    "I squirmed and trembled while telling. I have a premonition that If she doesn't believe me, then no one will ever do."
+    katrina "......"
+    show katrina a_0
+    katrina "Chi..na?"
+    show cornelia a_7
+    roc_c "You...believed in me?"
+    show katrina a_5
+    katrina "It's quite bizarre but...I cannot image Taiwan acting this to me. I mean it's that little BITCH always following Sayaka and mocking me like hell!"
+    show katrina a_1
+    katrina "And you should look at yourself, you're soooo adorable like a chick right now."
+    show cornelia a_8
+    "I glanced at the mirror, a lovely girl bearing tears in her eye. Her tiny frame shaking for help. I have never seem Taiwan, or any girl looking so helpless."
+    "The male part of me almost wanted to hug her tightly and pat her head, however that thought only humiliated me more."
+    think "She ... is that what I look like now? what a shame!"
+    show cornelia a_5
+    "I wiped out the tears"
+    think "It's the tear of being moved that she trusted me. Definitely not out of fear or anything like that!"
+    show katrina b_5
+    katrina "On the other hand...you {b}are{/b} a chick for real! HaHaHaHaHa!"
+    show cornelia b_3 at faceleft
+    roc_c "This is not funny! I'm {b}not{/b} a woman!"
+
+    show katrina b_1:
+        block:
+            easein 0.5 xpos 0.45
+            easein 0.5 xpos 0.25
+    with vpunch
+    "She grabbed my breasts and touched my flat groin in a flash."
+    show cornelia a_3
+    roc_c "Heeeeeyyyy what the heck man!"
+    show katrina b_1
+    katrina "Looks like there's nothing manly there lil'lady?"
+    show cornelia b_3 blush
+    roc_c "I...you PERVERT!!"
+    "I blushed and yelled out of anger."
+    show katrina a_1
+    katrina "Pervert hum? You even {b}sounded{/b} like a girl! Are you actually tricking me Taiwan-chan?"
+    show cornelia b_5
+    roc_c "I'm not Taiwan and {b}DON'T{/b} call me that, Kat. A hundred percent serious here."
+    show katrina a_2
+    katrina "Affrimative, I was just teasing. Anyway, what's your plan? I mean if he really has that...magical power, then how're you gonna fight him?"
+    show cornelia a_6
+    roc_c "I'm still...wondering."
+    show katrina a_0
+    katrina "Just remember I'll always be on your side."
+    show cornelia a_2
+    roc_c "Thank you Kat. It's such a relief to me."
+    show katrina a_1
+    katrina "Well, who can really give up such a cute puppy like you?"
+    show cornelia a_3 blush
+    roc_c "{size=+5}Kat!!!!!{/size}"
+
+    play sound sfx_bell
+    hide cornelia with easeoutright
+    hide katrina with easeoutright
+    stop music fadeout 1.5
+
+    scene bg classroom 2 with dissolve
+    play music bgm_hackbeat
+
+    "We headed toward next classes separately."
 
 #    "I felt something rubbing my body. The unusual tightness around my upper body, especially the breast part got released, soon replaced by a soft and silky touch."
 #    "As I opened my {i}mind eyes{/i}."
