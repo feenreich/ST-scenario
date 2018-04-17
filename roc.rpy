@@ -795,7 +795,7 @@ label scenario_roc:
     roc_c "It's a long story...Please listen and belive me."
     show katrina a_0
     katrina "I'll do it."
-    "I elaborated everything, from the awful encounter of my uncle Jack -who I used the phrase 'body-stealer' to describe avoiding the magic effect-, my accidental residence on Taiwan's body, my deceived mom, the memories of Kiyoshi, to the shenanigan just occurred."
+    "I elaborated everything, from the awful encounter of my uncle Jack -who I used the phrase 'body-stealer' to describe avoiding the magic effect-, my accidental residence on Taiwan's body, my deceived mom, the manipulated memories of Kiyoshi, to the shenanigan just occurred."
     if flag_tw > 0:
         "Omitting the little fun last night of course."
     show katrina a_3
@@ -842,9 +842,9 @@ label scenario_roc:
     show katrina a_2
     katrina "Affrimative, I was just teasing. Anyway, what's your plan? I mean if he really has that...magical power, then how're you gonna fight him?"
     show cornelia a_6
-    roc_c "I'm still...wondering."
+    roc_c "I'm still wondering...{w=0.5}maybe you should pretend not knowing this in front of {i}China{/i}, or you might be controlled too!"
     show katrina a_0
-    katrina "Just remember I'll always be on your side."
+    katrina "Sure, just remember I'll always be on your side."
     show cornelia a_2
     roc_c "Thank you Kat. It's such a relief to me."
     show katrina a_1
@@ -857,18 +857,138 @@ label scenario_roc:
     hide katrina with easeoutright
     stop music fadeout 1.5
 
-    scene bg classroom 2 with dissolve
+    scene bg school hallway day with dissolve
     play music bgm_hackbeat
 
     "We headed toward next classes separately."
+    show cornelia a_1 at center
 
-#    "I felt something rubbing my body. The unusual tightness around my upper body, especially the breast part got released, soon replaced by a soft and silky touch."
-#    "As I opened my {i}mind eyes{/i}."
+    menu:
+        roc_c "I should go to"
+        "{b}MY{/b} class":
+            $ flag_roc += 1
+            think "There is no way I go to Taiwan's class, I'm not gonna impersonate her!"
+            scene bg classroom 2 with dissolve
+            show jack a_3 at center
+            "I walked straight into the classroom. However my seat was already occupied by a familiar face grinning at me."
+            think "It will be awkward to quarrel with him now. Guess I'll have to go to Taiwan's class."
+        "My class":
+            $ flag_tw += 1
+            think "It will be awkward for Taiwan to attend {b}my{/b} class. Guess I'll have to go to Taiwan's class."
 
+    scene bg classroom 3 day with dissolve
+    show sayaka a_1 at center
+    show cornelia b_0 at centerleft, faceright with easeinleft
+    "I sat besides sayaka, as Taiwan usually does."
+    sayaka "Have you been better?"
+    show cornelia a_1
+    roc_c "I feel much better now. Thanks buddy."
+    show sayaka a_0
+    sayaka "{i}...Buddy? gosh she's definitely not fine.{/i}"
+    "Sayaka gave me a concerned eye."
+    show cornelia a_0 blush
+    roc_c "I'm ra-really{w=0.5}...{w=0.5}fe-fine"
+    "I stuttered."
+    think "Oh God she is even more adorable with the confusing eyes. She never looked at me right at the face before!"
+    "I can feel my blood pressure suring. I do not lack the experience talking with girls. However this is different, the most beautiful girl in the school gazing at me, worrying about my health."
+    show cornelia a_9
+    roc_c "{size=-5}This is heaven...{/size}"
+    show sayaka a_5
+    sayaka "Hum..."
+    show cornelia a_4
+    "I snapped out."
+    think "Stop indulging yourself China! She is just concerning about her friend Taiwan, not you! I have to keep that in mind."
+    roc_c "I'm really fine. Let's focus on the class."
+    hide cornelia with dissolve
+    hide sayaka with dissolve
+    "And so the class passed safely. I went to the school cafeteria."
 
-#    tw "You woke up, didn't you?{w=1}Who are you and why are you doing this!?"
-#    "In the next few minutes, I told her the whole story - from my crazy uncle, my magical power, to my stolen identity and my deceived mother."
-#    "She seems rather calm, to be honest, the situation of her is kinda similar to me. Although the story is hard to belive, its even more difficult to deny the reality."
+    stop music fadeout 1.5
+    show bg lunch with dissolve
 
+    show cornelia a_1 at center
+    "I took eggplant, cabage and fried tofu, not what I accustomed to. However I feel like having them would be fine today."
+
+    show cornelia a_5
+    "Looking around, I can see my usual gang, including {i}myself{/i} in the corner and Taiwan's friends at the center."
+    menu lunch_choice:
+        "I should eat with"
+        "{b}MY{/b} friends":
+            $ flag_roc += 1
+            "I had no willing to eat with Taiwan's friends at all, so I eyed Kat and walked toward my friends. She smiled back to me."
+            show jack a_0 at centerright
+            show kiyoshi a_0 at right
+            show katrina a_0 at centerleft
+            show kyoko a_0 at left
+            show cornelia a_2
+            roc_c "Hey guys, may I join you?"
+            show kyoko a_4
+            "Kyoko turned into an awkward look. I knew Sayaka and Taiwan teased her a lot, in an excessively harsh fashion for tender girl like Kyoko. I used to think they are just hostile against Kyoko."
+            "But considering how Sayaka talked to me, maybe that's just the wording and they don't really dislike Kyoko."
+            show jack a_1
+            show kiyoshi a_1
+            kiyoshi "Of course, did C-woman finally decides to join our great team for alien hunting?"
+            prc "Just sit besides me, {i}Wan-chan~{/i}"
+            show cornelia a_1
+            "I dodged his hand trying to grab me at the waist and sat down. The only empty seat is besides him so I have no choice."
+            show cornelia a_0
+            "Once again I was reminded how tiny Taiwan is. I can barely put my foot on the ground when sitting now. And the table now lies at a very different height also."
+            think "This is horrible.. I feel like back to the elementary school!"
+            show katrina a_1
+            katrina "So what wind blew you here, {i}Wan-chan{/i}?"
+            show jack a_1
+            prc "Well, she just became my girlfriend yesterday."
+            show kiyoshi a_1
+            kiyoshi "C-man really learned a lot from me, haha."
+            show kyoko a_3
+            show cornelia a_3
+            "{i}KILL ME{/i}. I frowned. However it's better to not trigger him right now, so I nodded begrudgingly."
+            kyoko "China..and Taiwan? But I thought you're dating Japan."
+            show cornelia a_4
+            roc_c "I broke up with him."
+            think "I {b}WILL{/b}."
+            kyoko "But when did you start? I barely see you even talking."
+            show jack a_2
+            prc "Guess she just fell for my superior figure? Afterall I-China is an extremely intelligent handsome charming guy, don't you think so? Japan was just an assole that bewitched her."
+            "He glanced at me."
+            show cornelia a_1
+            roc_c "I can't really deny that."
+            show kyoko a_4
+            kyoko "..."
+            show katrina a_3
+            katrina "Wow how do you make her agree with {b}THAT{/b}. We all know that {i}China{/i} just have middle-bottom grade and not particularly hot. The only advantage of him is that he don't bite!"
+            show cornelia a_7
+            roc_c "{size=+5}NO! That's because he didn't pay too much on studying. And what do you mean by not HOT, my-China's figure is {b}GREAT{/b}!{/size}"
+            show katrina a_1
+            show jack a_3
+            "I shouted and blushed noticing that the cafeteria became quiet for a full 5-second."
+            show cornelia a_8
+            think "Dammit Kat!"
+            prc "Taiwan was true, I do have hidden muscles all around. {i}She had seen it{/i}."
+            show kiyoshi a_6
+            show kyoko a_5
+            think "Oh No, I don't want to keep the topic.. Kat help me!"
+            roc_c "*cough*. Anyway, what's your guys plan after school?"
+            show katrina a_0
+            katrina "I and China have D&D club today, you wanna join us?"
+            show cornelia a_2
+            roc_c "Sure!"
+            think "I almost forgot that today is Thursday."
+            show jack a_5
+            prc "Hmm, I'll pass today Kat, got stuff to do. Just let Taiwan take my position, I've told her everything."
+            "I don't know what he's planning, but it'd be great that I can play my own character, as {b}China{/b}."
+            show cornelia a_1
+            show jack a_0
+            show katrina a_0
+            show kyoko a_0
+            "We continued our normal topic, around alies, sci-fi dramas, with Kat touching me occasionally in a teasing girl-to-girl way."
+            show cornelia a_1 at faceleft
+            "I can't blend in too much in this form. But hearing them is quite a relish as well. I can temporarily forget my predicament, as long as I don't look at my own face."
+
+        "{s}My friends{/s}":
+            placeholder
+            #block of code to run
+    play sound sfx_bell
+    "And the bell rang. We headed towards our own classes."
 
     placeholder
