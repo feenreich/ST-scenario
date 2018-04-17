@@ -203,11 +203,6 @@ label scenario_roc:
                 linear 0.3 ypos 0.87
     with vpunch
     play sound sfx_whack
-#    show cornelia a_3:
-#        parallel:
-#            linear 4.5 xpos 0.1
-#        parallel:
-#            linear 4.5 ypos 1.0
     roc_c "Aweee!"
     "Right after making my first step, I fell down in a way that I've never experienced.{w=0.5} The balance of this body is totally different from my own."
 
@@ -917,12 +912,12 @@ label scenario_roc:
             $ flag_roc += 1
             "I had no willing to eat with Taiwan's friends at all, so I eyed Kat and walked toward my friends. She smiled back to me."
             show jack a_0 at centerright
-            show kiyoshi a_0 at right
+            show kiyoshi a_0 at right, faceleft
             show katrina a_0 at centerleft
             show kyoko a_0 at left
             show cornelia a_2
             roc_c "Hey guys, may I join you?"
-            show kyoko a_4
+            show kyoko b_3
             "Kyoko turned into an awkward look. I knew Sayaka and Taiwan teased her a lot, in an excessively harsh fashion for tender girl like Kyoko. I used to think they are just hostile against Kyoko."
             "But considering how Sayaka talked to me, maybe that's just the wording and they don't really dislike Kyoko."
             show jack a_1
@@ -940,7 +935,7 @@ label scenario_roc:
             prc "Well, she just became my girlfriend yesterday."
             show kiyoshi a_1
             kiyoshi "C-man really learned a lot from me, haha."
-            show kyoko a_3
+            show kyoko b_4
             show cornelia a_3
             "{i}KILL ME{/i}. I frowned. However it's better to not trigger him right now, so I nodded begrudgingly."
             kyoko "China..and Taiwan? But I thought you're dating Japan."
@@ -953,7 +948,7 @@ label scenario_roc:
             "He glanced at me."
             show cornelia a_1
             roc_c "I can't really deny that."
-            show kyoko a_4
+            show kyoko b_6
             kyoko "..."
             show katrina a_3
             katrina "Wow how do you make her agree with {b}THAT{/b}. We all know that {i}China{/i} just have middle-bottom grade and not particularly hot. The only advantage of him is that he don't bite!"
@@ -962,11 +957,11 @@ label scenario_roc:
             show katrina a_1
             show jack a_3
             "I shouted and blushed noticing that the cafeteria became quiet for a full 5-second."
-            show cornelia a_8
+            show cornelia a_8 blush
             think "Dammit Kat!"
             prc "Taiwan was true, I do have hidden muscles all around. {i}She had seen it{/i}."
             show kiyoshi a_6
-            show kyoko a_5
+            show kyoko b_5
             think "Oh No, I don't want to keep the topic.. Kat help me!"
             roc_c "*cough*. Anyway, what's your guys plan after school?"
             show katrina a_0
@@ -978,7 +973,7 @@ label scenario_roc:
             prc "Hmm, I'll pass today Kat, got stuff to do. Just let Taiwan take my position, I've told her everything."
             "I don't know what he's planning, but it'd be great that I can play my own character, as {b}China{/b}."
             show cornelia a_1
-            show jack a_0
+            show jack a_1
             show katrina a_0
             show kyoko a_0
             "We continued our normal topic, around alies, sci-fi dramas, with Kat touching me occasionally in a teasing girl-to-girl way."
@@ -989,6 +984,113 @@ label scenario_roc:
             placeholder
             #block of code to run
     play sound sfx_bell
+    hide cornelia
+    hide jack
+    hide katrina
+    hide kyoko
+
+    stop music fadeout 2
+    scene black with dissolve
+    scene bg school hallway day with dissolve
+
     "And the bell rang. We headed towards our own classes."
+    think "Since {s}the fake{/s} China has back, I could only go to Taiwan's class, which is P.E. I entered the female lockerroom the first time in my life."
+
+    scene black with dissolve
+    scene bg lockerroom day  with dissolve
+    play music bgm_porch_swing_days_slower
+
+    show cornelia a_1 blush at center
+    "Although nobody was here since I'm already late, I can still feel my body temperature rising."
+    think "How unfortunate, I should've come earlier!"
+    "According to the memory. Taiwan is in the school girls swimming team so the teacher allows her to go practice during class."
+    show cornelia a_3 at center with vpunch
+    think "Swimming?!"
+    "I cringed realizing the implied meaning, that I have to wear the swimming suit of her, in front of people."
+    show cornelia a_5
+    "I took her swimwear, a blue-white stripped cute bikini."
+    show cornelia a_7
+    think "How can she cover her body with a little piece of cloth like this? The two pieces together is even smaller than my underpants."
+    show cornelia a_4
+    think "It's a pleasure to watch girls wearing bikinis, but {b}wearing{/b} one is quite another matter."
+    "My male pride would never allow me to do that. On the other hand if I don't ditch, then I will be surrounded by the school's best bodies in swimsuits."
+    show cornelia a_9
+    think "And I can probably change clothes with them afterward. A {b}LIFE TIME CHANCE{/b}!"
+    "After some struggle between self-esteem and lust, the devil won by a large margin."
+    outfit cornelia none
+    show cornelia b_0
+    "I took off the uniform and underwears. The naked body of Taiwan is still dazzling to me. I put on the suits hastily."
+    outfit cornelia swimwear
+    show cornelia b_2
+    think "{b}Perfect!{/b}"
+    show cornelia b_1
+    "I looked at the mirror and spun. On my back was a perfectly tied knot."
+    show cornelia b_7
+    think "Wow, did my hand just tied the strings automatically? It felt so natural that I didn't even notice."
+    show cornelia b_0
+    think "The bottom-part felt like a super tight briefs. However the tightness is mainly on the hip side instead of the front, which made me quite frustrated. The cups supporting my new accompany is looser than the bras and I liked it better."
+    show cornelia b_4
+    think "To have something covering my chest also make me ashamed, like hiding some dirty secrets from the public. Although it's the most marvelous thing in the universe covered."
+    think "I should go now."
+
+    scene bg school pool day
+    outfit mel swimsuit
+    outfit flavia swimsuit
+    show flavia a_0 at right, faceright
+    hide flavia with easeoutright
+    show cornelia b_1 at center with easeinleft
+    show mel a_0 at centerright
+    roc_c "Sorry I'm late~...{w=1}Mel."
+    "In front of me was the vise captain of the team, Mel. Anyone can tell at one glance that she's a sunshine girl by her healthy tanned skin. Also, very importantly, she has very large boobs."
+    show cornelia b_4
+    think "So envious..."
+    show cornelia b_7
+    "{b}NO{/b} I'm not jeaous! I'm a MAN! I'm just wondering how it feels to have such large boobies."
+    show mel b_0 at faceleft
+    mel "Hello Taiwan~~it's so unlike you to be tardy. Flavia has already started the routine, I guess you'll have to make up for it later."
+    show cornelia b_2
+    roc_c "Okaaaay."
+    "I feel light and bright at the sight of pool. I wasn't particularly into swimming. But Taiwan liked it a lot. From the memory I saw that she started swimming at the ocean with her family in her childhood."
+    show cornelia b_5
+    "Basically Taiwan is a sea-girl, very different from me. But maybe her body is effecting me, I have an eager to jump into the pool."
+    show cornelia b_0:
+        xalign 0.45
+        faceright
+        linear 1.0 xalign 0.55
+        faceleft
+        linear 1.0 xalign 0.45
+        repeat 2
+    "After a brief warmup I began my training."
+    hide cornelia with vpunch
+    show mel a_1
+    mel "I should start too."
+    hide mel with vpunch
+
+    nvl clear
+    nvl_narrator "And so the time passed peacefully. I was not good at swimming, but the body seemed to remember it. I can easily acclimate to the training by calling up some memories."
+    nvl_narrator "No one doubted my identity since there's not too much chance to chat."
+    nvl_narrator "To my surprise, the whole experience was enjoyable. Caressed by cool water was way better than running around catching ball-shape objects."
+    nvl_narrator "The pool consists of only girls, so nobody really paid attention on me. I almost forgot that I was crossdressing - mentally."
+    nvl_narrator "Flavia and Mel's mature bodies were voluptuous, but I found myself indulged in the training more. Maybe not having a dick does effect your focus."
+    nvl_narrator "Flavia asked me to do three more round after class to compensate my tardiness, so I didn't manage to get into the angels' secret garden."
+
+    scene black with dissolve
+    scene bg lockerroom day with dissolve
+    show cornelia b_4 at center
+    roc_c "I should {b}never{/b} be late again!"
+    show cornelia b_1
+    think "There's a school swimming contest incoming next week also, and I'm {b}NOT{/b} losing it."
+    show cornelia b_4
+    think "Wait..I should not plan for this body. I'm not gonna stay like this!"
+    "I dressed up and headed towards the next class."
+    hide cornelia
+    outfit cornelia uniform
+
+    stop music fadeout 1.5
+
+    scene black with dissolve
+    scene bg classroom 4 day with dissolve
+    play music bgm_hackbeat
+    "The last class today is history."
 
     placeholder
