@@ -964,19 +964,26 @@ label scenario_roc:
             show kyoko b_5
             think "Oh No, I don't want to keep the topic.. Kat help me!"
             roc_c "*cough*. Anyway, what's your guys plan after school?"
-            show katrina a_0
-            katrina "I and China have D&D club today, you wanna join us?"
-            show cornelia a_2
-            roc_c "Sure!"
-            think "I almost forgot that today is Thursday."
-            show jack a_5
-            prc "Hmm, I'll pass today Kat, got stuff to do. Just let Taiwan take my position, I've told her everything."
-            "I don't know what he's planning, but it'd be great that I can play my own character, as {b}China{/b}."
+            show kiyoshi a_2
+            kiyoshi "Keep preparing for the incoming aliens of course, right?"
+            show kyoko a_4
+            "Kiyoshi passed a passionate eye to Kyoko, but Kyoko seemed nervous. Maybe she didn't want me - Taiwan to know about her plan."
+            "Although she's quite serious about that alien stuff, she may not want the rumor spreaded. Afterall, Taiwan was not friendly to her."
+            show cornelia a_4
+            think "And now I looked like Taiwan {i}exactly{/i}. So she's cautious around me."
+#            show katrina a_0
+#            katrina "I and China have D&D club today, you wanna join us?"
+#            show cornelia a_2
+#            roc_c "Sure!"
+#            think "I almost forgot that today is Thursday."
+#            show jack a_5
+#            prc "Hmm, I'll pass today Kat, got stuff to do. Just let Taiwan take my position, I've told her everything."
+#            "I don't know what he's planning, but it'd be great that I can play my own character, as {b}China{/b}."
             show cornelia a_1
             show jack a_1
             show katrina a_0
             show kyoko a_0
-            "We continued our normal topic, around alies, sci-fi dramas, with Kat touching me occasionally in a teasing girl-to-girl way."
+            "We continued our normal topic, around alies, sci-fi dramas, with Kat touching me occasionally in a teasing girl-to-girl way. Kyoko was unhappy because of my presence, but I stayed unwilling to join Sayaka-gang."
             show cornelia a_1 at faceleft
             "I can't blend in too much in this form. But hearing them is quite a relish as well. I can temporarily forget my predicament, as long as I don't look at my own face."
 
@@ -1091,6 +1098,18 @@ label scenario_roc:
     scene black with dissolve
     scene bg classroom 4 day with dissolve
     play music bgm_hackbeat
-    "The last class today is history."
+    "The last class of Taiwan today is history."
+
+    text start cornelia
+    text title "Unknown"
+
+    msg katrina "Buddy, finally found Taiwan's number! U wanna join the club as 'China' today? I didn't feel right to invite him."
+
+    msg cornelia "Sure! I'll go."
+
+    text end
+
+    show cornelia a_1
+    roc_c "I almost forgot that today is Thursday."
 
     placeholder
